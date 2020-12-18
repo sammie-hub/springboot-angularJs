@@ -1,0 +1,67 @@
+
+<div id="stTab-2" class="stTab stTab-2 ng-scope stTab--active">
+	<section id="banner-2"
+		class="banner text-center scBlk scBlk--mid scBlk--p">
+		<div class="secBlk__inner">
+			<h2>List Employees</h2>
+			<p>{{message}}</p>
+		</div>
+	</section>
+	<section id="sDtbl" class="sDtbl scBlk scBlk--p col-md-10 pt-5 mx-auto">
+		<div class="pb-3" style="display: flex; align-items: center; width: 100%">
+			<div class="mr-4">
+				Rows to display: <input type="number" step="1" min="0"
+					ng-model="rowLimit" />
+			</div>
+			<div class="px-3 ml-3 mr-4">
+				Sort By: <select ng-model="sortColumn">
+					<option value="name">Name ASC</option>
+					<option value="salary">Salary ASC</option>
+				</select>
+			</div>
+			
+			<div class="pl-3 ml-auto">
+				Search: <input type="text" placeholder="Search"
+					ng-model="searchText" />
+			</div>
+		</div>
+		<table id="dtable" class="table table-striped table-bordered"
+			style="width: 100%">
+			<thead>
+				<tr>
+					<th ng-click="sortData('empId')">Employee Id
+						<div ng-class="getSortClass('empId')"></div>
+					</th>
+					<th ng-click="sortData('name')">Name
+						<div ng-class="getSortClass('name')"></div>
+					</th>
+					<th ng-click="sortData('email')">Email
+						<div ng-class="getSortClass('email')"></div>
+					</th>
+					<th ng-click="sortData('department')">Department
+						<div ng-class="getSortClass('department')"></div>
+					</th>
+					<th ng-click="sortData('salary')">Salary
+						<div ng-class="getSortClass('salary')"></div>
+					</th>
+					<th ng-click="sortData('contactNo')">Contact
+						<div ng-class="getSortClass('contactNo')"></div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr
+					ng-repeat="employee in employees | limitTo:rowLimit | orderBy: sortColumn:reverseSort | filter:searchText"
+					ng-click="listEmployee(employee)">
+					<td ng-controller="employeeDetailsController"><a
+						href="/details">{{employee.empId}}</a></td>
+					<td>{{employee.name}}</td>
+					<td>{{employee.email}}</td>
+					<td>{{employee.department}}</td>
+					<td>{{employee.salary}}</td>
+					<td>{{employee.contactNo}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</div>

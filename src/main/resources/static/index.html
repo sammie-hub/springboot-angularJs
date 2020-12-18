@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Employee Management</title>
+        	<base href="/">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-resource.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="app/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body ng-app="EmployeeModule">
+    <div class="cwrap">
+      <aside id="sAside" class="sAside">
+        <div class="logo">
+          Employee Management
+        </div>
+        <div class="sMenu">
+          <ul id="sNav" class="sNav">
+            <li><a href="/aEmp" class="stTab-1 active">Add Employee</a></li>
+            <li><a href="/lEmp" class="stTab-2">List Employees</a></li>
+          </ul>
+        </div>
+      </aside>
+      <div class="srtMain">
+        <ng-view></ng-view>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    
+  </body>
+</html>

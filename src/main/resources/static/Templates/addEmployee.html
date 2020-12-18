@@ -1,0 +1,56 @@
+ <div id="stTab-1" class="stTab stTab--active stTab-1" ng-controller="employeesController">
+          <section id="banner" class="banner text-center scBlk scBlk--mid scBlk--p">
+            <div class="secBlk__inner">
+              <h2>Add Employee</h2>
+            </div>
+          </section>
+          <section id="epForm" class="epForm scBlk scBlk--p">
+            <div class="frm frmWrap">
+              <div class="frm__head">
+              <h1>{{message}}</h1><br><br>
+                <h4 class="text-uppercase">Add Employee</h4>
+              </div>
+              <form class="frmRow">
+                <div class="frmCol frmCol__half">
+                  <div class="frmGrp">
+                    <label for="fname">Name</label>
+                    <input id="fname" ng-model="employee.name" type="text" class="frmInput" placeholder="" />
+                  </div>
+                </div>
+                <div class="frmCol frmCol__half">
+                  <div class="frmGrp">
+                    <label for="fid">Employee ID</label>
+                    <input id="fid" ng-model="employee.empId" type="text" class="frmInput" placeholder="" />
+                  </div>
+                </div>
+                <div class="frmCol frmCol__half">
+                  <div class="frmGrp">
+                    <label for="femail">Email</label>
+                    <input id="femail" ng-model="employee.email" type="email" class="frmInput" placeholder="" />
+                  </div>
+                </div>
+                <div class="frmCol frmCol__half">
+                  <div class="frmGrp">
+                    <label for="frole">Department</label>
+                    <input id="frole" ng-model="employee.department" type="text" class="frmInput" placeholder="" />
+                  </div>
+                </div>
+                <div class="frmCol frmCol__half">
+                  <div class="frmGrp">
+                    <label for="fstatus">Salary</label>
+                    <input id="fstatus" ng-model="employee.salary" type="select" class="frmInput" placeholder="" />
+                  </div>
+                </div>
+                <div class="frmCol frmCol__half">
+                  <div class="frmGrp">
+                    <label for="fcontact">Contact</label>
+                    <input id="fcontact" ng-model="employee.contactNo" type="text" class="frmInput" placeholder="" />
+                  </div>
+                </div>
+                <div class="frmCol frmCol__full btnWrap">
+                  <button type="button" class="btn btn-primary" ng-click="saveEmployee()">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>

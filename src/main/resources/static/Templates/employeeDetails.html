@@ -1,0 +1,50 @@
+
+<div id="stTab-1" class="stTab stTab--active stTab-1">
+	<section id="banner"
+		class="banner text-center scBlk scBlk--mid scBlk--p">
+		<div class="secBlk__inner">
+			<h2>Employee Details</h2>
+		</div>
+	</section>
+	<section id="epForm" class="epForm scBlk scBlk--p">
+		<div class="frm frmWrap">
+			<h3 class="mb-4">{{message}}</h3>
+			<form class="frmRow" ng-controller="employeesController">
+				<table class="tblWrap" style="border: 1px solid black">
+					<tr>
+						<td>Employee ID</td>
+						<td>{{employeeD.empId}}</td>
+					</tr>
+					<tr>
+						<td>Name</td>
+						<td>{{employeeD.name}}</td>
+					</tr>
+					<tr>
+						<td>Department</td>
+						<td>{{employeeD.department}}</td>
+					</tr>
+					<tr>
+						<td>Salary</td>
+						<td>{{employeeD.salary}}</td>
+					</tr>
+					<tr>
+						<td>Email Id</td>
+						<td>{{employeeD.email}}</td>
+					</tr>
+					<tr>
+						<td>Contact Number</td>
+						<td>{{employeeD.contactNo}}</td>
+					</tr>
+				</table>
+				<div class="frmCol frmCol__full btnWrap d-flex">
+					<button type="button" class="btn btn-primary"
+						ng-click="updateEmployeeInit(employeeD)">Update</button>
+
+
+					<button type="button" class="btn btn-primary ml-3"
+						ng-click="deleteEmployee(employeeD)">Delete</button>
+				</div>
+			</form>
+			<br> <a href="/lEmp">Back to Employee List</a>
+		</div>
+	</section>
