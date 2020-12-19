@@ -31,15 +31,6 @@ var appEmployee = angular
 			})
 			$locationProvider.html5Mode(true);
 		})
-		.controller("homeController", function($scope) {
-			$scope.message = "Home Page";
-		})
-		.controller(
-				"coursesController",
-				function($scope) {
-					$scope.courses = [ "C#", "VB.NET", "ASP.NET", "SQL Server",
-							"AngularJS", "JavaScript" ];
-				})
 		.controller(
 				"employeesController",
 				[
