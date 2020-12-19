@@ -60,7 +60,7 @@ The application is deployed on AWS.
  
 ## Deployment Architecture
 
-![Flowchart](https://user-images.githubusercontent.com/61722596/102676671-b55d5c00-416c-11eb-839b-07998b8724bf.png)
+![Flowchart-1](https://user-images.githubusercontent.com/61722596/102677312-d96e6c80-416f-11eb-8d74-842438c607a0.png)
 
 ### AWS Code Pipeline
 ![Screenshot (175)](https://user-images.githubusercontent.com/61722596/102676779-269d0f00-416d-11eb-8f6e-2e8363e42914.png)
