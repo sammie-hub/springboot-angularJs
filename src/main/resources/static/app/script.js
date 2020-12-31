@@ -12,8 +12,7 @@ var appEmployee = angular
 		} ])
 		.config(function($routeProvider, $locationProvider) {
 			$routeProvider.when("/aEmp", {
-				templateUrl : "Templates/addEmployee.html",
-				controller : "homeController"
+				templateUrl : "Templates/addEmployee.html"
 			}).when("/lEmp", {
 				templateUrl : "Templates/listEmployee.html",
 				controller : "employeesController"
