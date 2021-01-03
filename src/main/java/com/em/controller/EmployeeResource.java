@@ -70,7 +70,6 @@ public class EmployeeResource {
 	@RequestMapping(value = "/employee/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Employee> findEmployeebyId(@PathVariable Integer id)
 	{
-		System.out.println("in find employee " + id);
 		Optional<Employee> result = employeeService.findOne(id);
 		if(result.isPresent())
 		{
